@@ -50,11 +50,13 @@ body{
     
     border: 5px solid;
 
-    overflow-y: auto; /* ⭐ 關鍵 */
+    /*overflow-y: auto;*/ /* ⭐ 關鍵 */
+    overflow-y: auto;
+    scrollbar-gutter: stable; /* ⭐ 超好用 */
+    /*overflow-y: scroll;*/ /* ⭐ 固定顯示 */
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
 
-    padding-right: 10px;
 }
 
 #avatar{
@@ -69,6 +71,8 @@ body{
     
     height: 25%;
     width: 80%;
+
+    margin: 10px;
 
     background: rgb(242, 181, 181);
     

@@ -29,7 +29,7 @@ const db = getFirestore(app);
 /////////////////////////////////////////
 
 // LINE 使用者資訊
-liff.init({ liffId: '2009518520-vWZ6LVdC' })
+liff.init({ liffId: '2009518520-I9r9w3Ic' })
 .then(() => {
     if (!liff.isLoggedIn()) {
         liff.login({
@@ -51,11 +51,13 @@ liff.init({ liffId: '2009518520-vWZ6LVdC' })
     console.error(err);
 });
 
-// 新增
+// 開啟新增頁面
 document.getElementById("add_event_btn").addEventListener("click", async () => {
     document.getElementById("add_event_area").style.display = "flex";
 });
 
+
+// 新增活動
 document.getElementById("send_btn").addEventListener("click", async () => {
 
     const eventName = document.getElementById("input_eventName").value.trim(); // trim() 會只留內容
@@ -83,6 +85,12 @@ document.getElementById("send_btn").addEventListener("click", async () => {
         console.error("新增失敗:", error);
         alert("新增失敗");
     }
+});
+
+// 關閉新增頁面
+document.getElementById("close_btn").addEventListener("click", async () => {
+    clearInput();
+    document.getElementById("add_event_area").style.display = "none";
 });
 
 // 清空輸入欄
