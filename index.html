@@ -5,9 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+
+    <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
 </head>
 <body>
-    
-    <script src="script.js"></script>
+    <div id="user_info">
+            <h2>LINE 使用者資訊</h2>
+            <p id="userId">userId: </p>
+            <p id="name">name: </p>
+            <img id="avatar" />
+    </div>
+
+    <div id="operation_area">
+        <div id="add_event_btn" class="btn">新增活動</div>
+    </div>
+
+    <div id="add_event_area">
+        <label>名稱</label>
+        <input id="input_eventName" autocomplete="off">
+        <label>描述</label>
+        <input id="input_eventDescription" autocomplete="off">
+        <div id="send_btn" class="btn">送出</div>
+    </div>
+
+    <div id="current_event"></div>
+
+    <script type="module" src="script.js"></script>
 </body>
 </html>
