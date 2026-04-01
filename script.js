@@ -29,7 +29,7 @@ const db = getFirestore(app);
 /////////////////////////////////////////
 
 // LINE 使用者資訊
-liff.init({ liffId: '2009518520-I9r9w3Ic' })
+liff.init({ liffId: '2009518520-vWZ6LVdC' })
 .then(() => {
     if (!liff.isLoggedIn()) {
         liff.login({
